@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.cards__container {
+  max-width: 1140px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 15px;
+
+  display: grid;
+  column-gap: 30px;
+  row-gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .cards__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+  .grid-row-span-2 {
+    grid-row: span 2;
+  }
+}
+
+.card {
+  color: white;
+
+  padding: 32px;
+  padding-top: 26px;
+
+  border-radius: 8px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+.card--violet {
+  background: #733fc8;
+}
+.card--light-gray {
+  background: #48556a;
+}
+.card--white {
+  color: black;
+}
+.card--black {
+  background: #19202d;
+}
+
+.card__person {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+.card__person-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  margin-right: 17px;
+}
+.card__person-img--highlighted {
+  border: 2px solid #a775f1;
+}
+.card__person-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+.card__person-name {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px;
+}
+.card__person-graduate {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 11px;
+  opacity: 0.5;
+}
+.card__title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
